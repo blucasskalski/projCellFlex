@@ -1,2 +1,15 @@
-# projCellFlex
-2023 CELLFLEX LLF BLS SE MC
+# CELLFLEX
+Repo. du prjet CELLFLEX 2023 LLF BLS SE MC
+
+## Installation
+
+...
+
+```bash
+...
+```
+
+
+## Lien(s)
+
+[Rimatara](https://rimatara.lyceelafayette.fr:5001/)
