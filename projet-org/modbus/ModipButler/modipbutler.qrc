@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/qam47.icns</file>
+        <file>images/qam47.png</file>
+        <file>images/qam47.xpm</file>
+    </qresource>
+</RCC>

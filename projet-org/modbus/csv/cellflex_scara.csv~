@@ -1,0 +1,34 @@
+# fichier de configuration pour QamModbusMap
+
+# projet : 	CELLFLEX
+# poste :	ROBOT SCARA (poste D)
+
+# note 1 : 1 seule butée, position palette différente suivant mode en cours
+#          montage ou démontage
+
+# note 2 : en mode chargement de palette, si D_Tab_Num vaut $FF,
+#          charge au poste D gérer le choix de la pièce à prendre
+
+# note 3 : en mode démontage, le stock de palettes vides est en attente
+#          sur la butée du poste D
+
+# 2 fields for server address, port and short description
+
+HOST;127.0.0.1
+PORT;4002
+INFO;Poste D - SCARA
+
+# 7 fields for entries: num; size; mask; name; comment; display; value
+
+# 0xxxx - coils
+
+00001;0;0;      D_Mon;      demande de déchargement palette;        Bool;   0
+00002;0;0;      D_Dem;      demande de chargement palette;          Bool;   0
+00003;0;0;      D_Ok;       acquittement pour D_Mon ou D_Dem;       Bool;   0
+00004;0;0;      D_Def_Num;  défaut numéro de pièce déjà traité;     Bool;   0
+
+# 4xxxx - holding registers
+
+40001;1;FFFF;   D_Loc;      local poste D;                          Hex;    0
+40001;1;00FF;	D_Tab_Num;  numéro de pièce 0..19;                  Uint;   0
+40001;1;0300;	D_Tab_Ori;	orientation pièce 0..3;                 Uint;   0
