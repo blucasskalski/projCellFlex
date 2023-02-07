@@ -1,0 +1,9 @@
+Pour mettre sous tension : 
+- mettre à 1 puis à 0  coil 00151
+- mettre à 1 puis à 0  coil 00057
+- mettre à 1 coil 00058
+
+Pour mettre hors tension :
+-mettre à 1 coil 00151
+-mettre à 0 coil 00057
+-mettre à 0 coil 00058

@@ -1,0 +1,23 @@
+# fichier de configuration pour QamModbusMap
+
+# projet : 	CELLFLEX
+# poste :	CONTROLE PAR VISION (poste C)
+
+# 2 fields for server address, port and short description
+
+HOST;192.168.1.15
+PORT;502
+INFO;Poste C - VISION
+
+# 7 fields for entries: num; size; mask; name; comment; display; value
+
+# 0xxxx - coils
+
+00001;0;0;      C_Mon;      demande de traitement (mode Montage);   Bool;   0
+00002;0;0;      C_Def;      défaut reconnaissance pièce;            Bool;   0
+
+# 4xxxx - holding registers
+
+40001;1;FFFF;   C_Loc;      local poste C;                          Hex;    0
+40001;1;00FF;	C_Tab_Num;  numéro de pièce 0..19;                  Uint;   0
+40001;1;0300;	C_Tab_Ori;	orientation pièce 0..3;                 Uint;   0

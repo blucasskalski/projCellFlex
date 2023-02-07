@@ -1,0 +1,2 @@
+40112;1;0010;   CC1_A_Pom;       demande de prise d'origine                 Bool;   0
+40112;1;0020;   CC1_A_Pom_Ok;    prise d'origine effectuée                  Bool;   0

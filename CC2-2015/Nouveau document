@@ -1,0 +1,184 @@
+while(1)
+{
+
+        if((m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "T1_Mon_Cap_Dep") == "0"))
+        {
+            pbuVersT1->setEnabled( false ) ;
+        }
+
+        if ((m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "T1_Mon_Cap_Dep") == "1") )
+        {
+           pbuVersT1->setEnabled( true ) ;
+           m_modbusMap.at(i)->setValue(table, "T1_Ver", "1" );
+           m_modbusMap.at(i)->setValue(table, "T1_Mon_Mot", "1" );
+
+        }
+
+        if(m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "T1_Mon_Cap_Arr") == "1")
+        {
+            m_modbusMap.at(i)->remoteValue( (QamModbusMap::PrimaryTable)table, "T1_Dem_Cap_Dep" ) ;
+             m_modbusMap.at(i)->remoteValue( (QamModbusMap::PrimaryTable)table, "T1_Dem_Cap_Arr" ) ;
+        }
+
+        if (m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "T1_Mon_Cap_Arr") == "0")
+    {
+            m_modbusMap.at(i)->setValue(table, "T1_Ver", "0" );
+            m_modbusMap.at(i)->setValue(table, "T1_Mon_Mot", "0" );
+
+
+            m_modbusMap.at(i)->setValue(table, "A_Dem_but", "1" );
+
+        }
+
+        if((m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "A_Mon_Cap") == "1") && (m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "A_Cap_XTab") == "1"))
+        {
+
+        m_modbusMap.at(i)->setValue(table, "A_Dem_but", "0" );
+        m_modbusMap.at(i)->setValue(table, "A_Ver_XTab", "0" );
+        m_modbusMap.at(i)->setValue(table, "A_Ver_XPal", "1" );
+
+        }
+
+        if(m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "A_Cap_XPal") == "1")
+        {
+        m_modbusMap.at(i)->setValue(table, "A_Ver_XPal", "0" );
+        m_modbusMap.at(i)->setValue(table, "A_Ver_XTab", "1" );
+
+
+        }
+
+
+
+
+
+
+    if((m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "T2_Mon_Cap_Dep") == "0"))
+    {
+        pbuVersT1->setEnabled( false ) ;
+    }
+
+    if ((m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "T2_Mon_Cap_Dep") == "1") )
+    {
+       pbuVersT1->setEnabled( true ) ;
+       m_modbusMap.at(i)->setValue(table, "T2_Ver", "1" );
+       m_modbusMap.at(i)->setValue(table, "T2_Mon_Mot", "1" );
+
+    }
+
+
+    if(m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "T2_Mon_Cap_Arr") == "1")
+    {
+        m_modbusMap.at(i)->remoteValue( (QamModbusMap::PrimaryTable)table, "T2_Dem_Cap_Dep" ) ;
+         m_modbusMap.at(i)->remoteValue( (QamModbusMap::PrimaryTable)table, "T2_Dem_Cap_Arr" ) ;
+    }
+
+    if (m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "T2_Mon_Cap_Arr") == "0")
+{
+        m_modbusMap.at(i)->setValue(table, "T2_Ver", "0" );
+        m_modbusMap.at(i)->setValue(table, "T2_Mon_Mot", "0" );
+    }
+
+
+
+    if(stop==1)
+    {
+    break;
+    break;
+    }
+
+
+       /* if ((m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "C_Mon_Cap") == "1") )
+        {
+           m_modbusMap.at(i)->setValue(table, "C_But", "1" );
+        }
+
+        if ((m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "C_Dem_Cap") == "1") )
+        {
+           m_modbusMap.at(i)->setValue(table, "C_But", "0" );
+        }
+
+        if ((m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "D_Mon_Cap") == "1") )
+        {
+           m_modbusMap.at(i)->setValue(table, "D_But", "1" );
+        }
+
+        if ((m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "D_Dem_Cap") == "1") )
+        {
+           m_modbusMap.at(i)->setValue(table, "D_But", "0" );
+        }
+
+        if ((m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "E_Mon_Cap") == "1") )
+        {
+           m_modbusMap.at(i)->setValue(table, "E_But", "1" );
+        }
+
+        if ((m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "E_Dem_Cap") == "1") )
+        {
+           m_modbusMap.at(i)->setValue(table, "E_But", "0" );
+        }
+
+        if ((m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "A_Mon_Cap") == "1") )
+        {
+            m_modbusMap.at(i)->setValue(table, "A_Mon_but", "1" );
+            m_modbusMap.at(i)->setValue(table, "A_Dem_but", "1" );
+        }
+
+        if ((m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "A_Dem_Cap") == "1") )
+        {
+            m_modbusMap.at(i)->setValue(table, "A_Mon_but", "1" );
+            m_modbusMap.at(i)->setValue(table, "A_Dem_but", "1" );
+        }
+
+        if((m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "T1_Mon_Cap_Dep") == "0"))
+        {
+            pbuVersT1->setEnabled( false ) ;
+        }
+
+        if ((m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "T1_Mon_Cap_Dep") == "1") )
+        {
+           pbuVersT1->setEnabled( true ) ;
+           m_modbusMap.at(i)->setValue(table, "T1_Ver", "1" );
+           m_modbusMap.at(i)->setValue(table, "T1_Mon_Mot", "1" );
+
+        }
+
+        if(m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "T1_Mon_Cap_Arr") == "1")
+        {
+            m_modbusMap.at(i)->remoteValue( (QamModbusMap::PrimaryTable)table, "T1_Dem_Cap_Dep" ) ;
+             m_modbusMap.at(i)->remoteValue( (QamModbusMap::PrimaryTable)table, "T1_Dem_Cap_Arr" ) ;
+        }
+
+        if (m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "T1_Mon_Cap_Arr") == "0")
+    {
+            m_modbusMap.at(i)->setValue(table, "T1_Ver", "0" );
+            m_modbusMap.at(i)->setValue(table, "T1_Mon_Mot", "0" );
+        }
+
+
+
+    if((m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "T2_Mon_Cap_Dep") == "0"))
+    {
+        pbuVersT1->setEnabled( false ) ;
+    }
+
+    if ((m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "T2_Mon_Cap_Dep") == "1") )
+    {
+       pbuVersT1->setEnabled( true ) ;
+       m_modbusMap.at(i)->setValue(table, "T2_Ver", "1" );
+       m_modbusMap.at(i)->setValue(table, "T2_Mon_Mot", "1" );
+
+    }
+
+    if(m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "T2_Mon_Cap_Arr") == "1")
+    {
+        m_modbusMap.at(i)->remoteValue( (QamModbusMap::PrimaryTable)table, "T2_Dem_Cap_Dep" ) ;
+         m_modbusMap.at(i)->remoteValue( (QamModbusMap::PrimaryTable)table, "T2_Dem_Cap_Arr" ) ;
+    }
+
+    if (m_modbusMap.at(0)->value(QamModbusMap::HoldingRegister, "T2_Mon_Cap_Arr") == "0")
+{
+        m_modbusMap.at(i)->setValue(table, "T2_Ver", "0" );
+        m_modbusMap.at(i)->setValue(table, "T2_Mon_Mot", "0" );
+    }*/
+
+}

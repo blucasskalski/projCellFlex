@@ -1,0 +1,7 @@
+<!DOCTYPE RCC>
+<RCC>
+    <qresource prefix="/prefix">
+        <file>ressources/test.png</file>		
+    </qresource>
+
+</RCC>

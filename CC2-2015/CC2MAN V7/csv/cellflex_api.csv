@@ -1,0 +1,153 @@
+# fichier de configuration pour QamModbusMap
+
+# projet : 	CELLFLEX
+# poste :	AUTOMATE (poste CC1)
+
+# note 1 : convoyeur - bande transporteuse 1 = de T1 vers T2
+#          sens aller mode montage
+
+# note 2 : convoyeur - bande transporteuse 2 = de T2 vers T1
+#          sens retour mode montage
+
+# 2 fields for server address, port and short description
+
+HOST;192.168.3.3
+PORT;502
+INFO;Poste CC1 - API
+
+# 0xxxx - coils
+
+# 00108 -> 00001;0;0;      C_Mon;      demande de traitement (mode Montage);   Bool;   0
+# 00109 -> 00002;0;0;      C_Def;      défaut reconnaissance pièce;            Bool;   0
+
+# 00110 -> 00001;0;0;      D_Mon;      demande de déchargement palette;        Bool;   0
+# 00111 -> 00002;0;0;      D_Dem;      demande de chargement palette;          Bool;   0
+# 00112 -> 00003;0;0;      D_Ok;       acquittement pour D_Mon ou D_Dem;       Bool;   0
+# 00113 -> 00004;0;0;      D_Def_Num;  défaut numéro de pièce déjà traité;     Bool;   0
+
+
+# Energie et air
+00057;0;0; Power_On; mise en énergie;   Bool; 0
+00058;0;0; Air_On; mise en air;         Bool; 0
+00151;0;0; Aru; Arret d'urgence;        Bool; 0
+
+# emplacement table croisée de 1 à 20
+00161;0;0; A_01; table croisée pièce 1; Bool; 0
+00162;0;0; A_02; table croisée pièce 2; Bool; 0
+00163;0;0; A_03; table croisée pièce 3; Bool; 0
+00164;0;0; A_04; table croisée pièce 4; Bool; 0
+00165;0;0; A_05; table croisée pièce 5; Bool; 0
+00166;0;0; A_06; table croisée pièce 6; Bool; 0
+00167;0;0; A_07; table croisée pièce 7; Bool; 0
+00168;0;0; A_08; table croisée pièce 8; Bool; 0
+00169;0;0; A_09; table croisée pièce 9; Bool; 0
+00170;0;0; A_10; table croisée pièce 10; Bool; 0
+00171;0;0; A_11; table croisée pièce 11; Bool; 0
+00172;0;0; A_12; table croisée pièce 12; Bool; 0
+00173;0;0; A_13; table croisée pièce 13; Bool; 0
+00174;0;0; A_14; table croisée pièce 14; Bool; 0
+00175;0;0; A_15; table croisée pièce 15; Bool; 0
+00176;0;0; A_16; table croisée pièce 16; Bool; 0
+00177;0;0; A_17; table croisée pièce 17; Bool; 0
+00178;0;0; A_18; table croisée pièce 18; Bool; 0
+00179;0;0; A_19; table croisée pièce 19; Bool; 0
+00180;0;0; A_20; table croisée pièce 20; Bool; 0
+
+# Indicateur de fin de mouvement de la table
+00181;0;0; Axis_X_At_Pnt; table croisée mouvement X terminé; Bool; 0
+00182;0;0; Axis_Y_At_Pnt; table croisée mouvement Y terminé; Bool; 0
+
+# 4xxxx - holding registers
+
+40101;1;FFFF;   BT1;             convoyeur - bande de T1 vers T2;        Hex;    0
+40101;1;0001;   BT1_Mon_Mot;     mode montage, moteur;                   Bool;   0
+40101;1;0002;   BT1_Mon_Cap;     mode montage, capteur moteur tourne;    Bool;   0
+40101;1;0004;   BT1_Dem_Mot;     mode démontage, moteur;                 Bool;   0
+40101;1;0008;   BT1_Dem_Cap;     mode démontage, capteur moteur tourne;  Bool;   0
+40101;1;0010;   BT1_Def_Mot;     défaut moteur;                          Bool;   0
+
+40102;1;FFFF;   BT2;             convoyeur - bande de T2 vers T1;        Hex;    0
+40102;1;0001;   BT2_Mon_Mot;     mode montage, moteur;                   Bool;   0
+40102;1;0002;   BT2_Mon_Cap;     mode montage, capteur moteur tourne;    Bool;   0
+40102;1;0004;   BT2_Dem_Mot;     mode démontage, moteur;                 Bool;   0
+40102;1;0008;   BT2_Dem_Cap;     mode démontage, capteur moteur tourne;  Bool;   0
+40102;1;0010;   BT2_Def_Mot;     défaut moteur;                          Bool;   0
+
+40103;1;FFFF;   T1;              convoyeur - transfert 1 (amont);          Hex;    0
+40103;1;0001;   T1_Mon_Cap_Arr;  mode montage, capteur arrivée palette;    Bool;   0
+40103;1;0002;   T1_Mon_Cap_Dep;  mode montage, capteur départ palette;     Bool;   0
+40103;1;0004;   T1_Dem_Cap_Arr;  mode démontage, capteur arrivée palette;  Bool;   0
+40103;1;0008;   T1_Dem_Cap_Dep;  mode démontage, capteur départ palette;   Bool;   0
+40103;1;0010;   T1_Ver;          vérin ascenseur;                          Bool;   0
+40103;1;0020;   T1_Mon_Mot;      mode montage, moteur;                     Bool;   0
+40103;1;0040;   T1_Mon_Cap;      mode montage, capteur moteur tourne;      Bool;   0
+40103;1;0080;   T1_Dem_Mot;      mode démontage, moteur;                   Bool;   0
+40103;1;0100;   T1_Dem_Cap;      mode démontage, capteur moteur tourne;    Bool;   0
+40103;1;0200;   T1_Def_Mot;      défaut moteur;                            Bool;   0
+
+40104;1;FFFF;   T2;              convoyeur - transfert 2 (aval);           Hex;    0
+40104;1;0001;   T2_Mon_Cap_Arr;  mode montage, capteur arrivée palette;    Bool;   0
+40104;1;0002;   T2_Mon_Cap_Dep;  mode montage, capteur départ palette;     Bool;   0
+40104;1;0004;   T2_Dem_Cap_Arr;  mode démontage, capteur arrivée palette;  Bool;   0
+40104;1;0008;   T2_Dem_Cap_Dep;  mode démontage, capteur départ palette;   Bool;   0
+40104;1;0010;   T2_Ver;          vérin ascenseur;                          Bool;   0
+40104;1;0020;   T2_Mon_Mot;      mode montage, moteur;                     Bool;   0
+40104;1;0040;   T2_Mon_Cap;      mode montage, capteur moteur tourne;      Bool;   0
+40104;1;0080;   T2_Dem_Mot;      mode démontage, moteur;                   Bool;   0
+40104;1;0100;   T2_Dem_Cap;      mode démontage, capteur moteur tourne;    Bool;   0
+40104;1;0200;   T2_Def_Mot;      défaut moteur;                            Bool;   0
+
+40105;1;FFFF;   A_Cycle_U;       poste A - cycle en U;                     Hex;    0
+40105;1;0001;   A_Mon_Cap;       mode montage, capteur présence palette;   Bool;   0
+40105;1;0002;   A_Dem_Cap;       mode démontage, capteur présence palette; Bool;   0
+40105;1;0004;   A_Mon_but;       mode montage, butée palette;              Bool;   0
+40105;1;0008;   A_Dem_but;       mode démontage, butée palette;            Bool;   0
+40105;1;0010;   A_Ver_XTab;      vérin horizontal, position au-dessus de la table;    Bool; 0
+40105;1;0020;   A_Ver_XPal;      vérin horizontal, position au-dessus de la palette;  Bool; 0
+40105;1;0040;   A_Cap_XTab;      capteur axe horizontal au-dessus de la table;        Bool; 0
+40105;1;0080;   A_Cap_XPal;      capteur axe horizontal au-dessus de la palette;      Bool; 0
+40105;1;0100;   A_ver_ZHaut;     vérin vertical, position haute;                      Bool; 0
+40105;1;0200;   A_ver_ZBas;      vérin vertical, position basse;                      Bool; 0
+40105;1;0400;   A_Cap_ZHaut;     capteur axe vertical en haut;                        Bool; 0
+40105;1;0800;   A_Cap_ZBas;      capteur axe vertical en bas;                         Bool; 0
+40105;1;1000;   A_Ver_Pince;     vérin pince ouverte;                                 Bool; 0
+
+40106;1;FFFF;   A_Tab;           poste A - table croisée;                   Hex;    0
+40106;1;00FF;   A_Tab_Num;       numéro d'emplacement 0..19 sous la pince;  Uint;   0
+40106;1;0100;   A_Tab_Num_Ok;    position demandée A_Tab_Num atteinte;      Bool;   0
+40106;1;0200;   A_Mon;           demande de chargement palette;             Bool;   0
+40106;1;0400;   A_Dem;           demande de déchargement palette;           Bool;   0
+40106;1;0800;   A_Ok;            acquittement pour A_Mon ou A_Dem;          Bool;   0
+40106;1;1000;   A_Def_MotX;      défaut moteur table X;                     Bool;   0
+40106;1;2000;   A_Def_MotY;      défaut moteur table Y;                     Bool;   0
+
+40107;1;FFFF;   C_Vision;        poste C - contrôle par vision;             Hex;    0
+40107;1;0001;   C_Mon_Cap;       mode montage, capteur présence palette;    Bool;   0
+40107;1;0002;   C_Dem_Cap;       mode démontage, capteur présence palette;  Bool;   0
+40107;1;0004;   C_But;           butée palette;                             Bool;   0
+
+# 40108 -> 40001;1;FFFF;   C_Loc;      local poste C;                          Hex;    0
+# 40108 -> 40001;1;00FF;   C_Tab_Num;  numéro de pièce 0..19;                  UInt;   0
+# 40108 -> 40001;1;0300;   C_Tab_Ori;  orientation pièce 0..3;                 UInt;   0
+
+40109;1;FFFF;   D_Scara;         poste D - robot Scara;                     Hex;    0
+40109;1;0001;   D_Mon_Cap;       mode montage, capteur présence palette;    Bool;   0
+40109;1;0002;   D_Dem_Cap;       mode démontage, capteur présence palette;  Bool;   0
+40109;1;0004;   D_But;           butée palette;                             Bool;   0
+
+# 40110 -> 40001;1;FFFF;   D_Loc;      local poste D;                          Hex;    0
+# 40110 -> 40001;1;00FF;   D_Tab_Num;  numéro de pièce 0..19;                  UInt;   0
+# 40110 -> 40001;1;0300;   D_Tab_Ori;  orientation pièce 0..3;                 UInt;   0
+
+40111;1;FFFF;	E_Attente;       poste E - palettes en attente;             Hex;    0
+40111;1;0001;   E_Mon_Cap;       mode montage, capteur présence palette;    Bool;   0
+40111;1;0002;   E_Dem_Cap;       mode démontage, capteur présence palette;  Bool;   0
+40111;1;0004;   E_But;           butée palette;                             Bool;   0
+
+40112;1;FFFF;   CC1_Mode;        poste CC1 - mode de contrôle-commande;     Hex;    0
+40112;1;0001;   CC1_Man;         mode manuel en cours;                      Bool;   0
+40112;1;0002;   CC1_Auto;        mode automatique en cours;                 Bool;   0
+40112;1;0004;   CC1_CC2;         demande de contrôle-commande extérieur;    Bool;   0
+40112;1;0008;   CC1_Mon;         mode montage en cours (sinon démontage);   Bool;   0
+40112;1;0010;   CC1_A_Pom;       demande de prise d'origine;                Bool;   0
+40112;1;0020;   CC1_A_Pom_Ok;    prise d'origine effectuée;                 Bool;   0
