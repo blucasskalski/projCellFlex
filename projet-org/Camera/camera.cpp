@@ -1,6 +1,5 @@
 #include "camera.h"
 #include "QDebug"
-#include "unistd.h"
 
 camera::camera(QWidget *parent) :
     QWidget(parent),
@@ -201,7 +200,7 @@ void camera::traitement_photo()
 {
     netoyage_bin();
     netoyage_signature();
-    QTime time;
+    QElapsedTimer time;
     if(!premier_passage)
     {
         time.start();
@@ -695,10 +694,10 @@ void camera::creation_BdD()
 
    //fichier BdD
    QFile file("/home/cellflex-vision/Documents/projet/config/BDD.csv");
-   if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) qDebug() << endl << "erreure fichier";
+   if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) qDebug() << Qt::endl << "erreure fichier";
    QTextStream flux(&file);
-   flux.setCodec("UTF-8");
-   flux << "#piece;" << "densite;" <<"gridASstring;" << "lineASstring;" << "line2ASstring;" << "rotation" << endl;
+   flux.setEncoding(QStringConverter::Utf8);
+   flux << "#piece;" << "densite;" <<"gridASstring;" << "lineASstring;" << "line2ASstring;" << "rotation" << Qt::endl;
 
    numPiece =0;
 
@@ -793,7 +792,7 @@ void camera::creation_BdD()
        if (i == 1)     numPiece = 1;
        if ( i ==(5+4*(numPiece-1)))    numPiece++;
 
-       flux << numPiece << ";" << densite <<";" << gridAString << ";"<< lineAString1 << ";" << lineAString2 <<";"<< rotation << endl;
+       flux << numPiece << ";" << densite <<";" << gridAString << ";"<< lineAString1 << ";" << lineAString2 <<";"<< rotation << Qt::endl;
 
        delete dest;
        delete dest1;

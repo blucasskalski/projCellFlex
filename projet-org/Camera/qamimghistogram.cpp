@@ -109,7 +109,7 @@ void QamImgHistogram::enterEvent(QEvent* event )
 {
 	this->setMouseTracking( true ) ;
 
-	QWidget::enterEvent(event) ;
+    QWidget::enterEvent((QEnterEvent*)event) ;
 }
 
 void QamImgHistogram::leaveEvent(QEvent* event )

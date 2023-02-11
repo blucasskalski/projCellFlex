@@ -3,6 +3,8 @@
 
 #include <QWidget>
 #include <QPaintEvent>
+#include <QEvent>
+#include <QEnterEvent>
 
 class QamImgHistogram : public QWidget
 {
@@ -14,7 +16,7 @@ class QamImgHistogram : public QWidget
 
   protected:
 	void paintEvent(QPaintEvent* ) ;
-	void enterEvent(QEvent* event ) ;
+    void enterEvent(QEvent* event );
 	void leaveEvent(QEvent* event ) ;
 	void mouseMoveEvent(QMouseEvent* event ) ;
 	void mousePressEvent(QMouseEvent* event ) ;
