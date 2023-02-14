@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'qamgraphicsscene.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.2.4)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,8 +12,8 @@
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'qamgraphicsscene.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.15.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.2.4. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -22,25 +22,22 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Qamgraphicsscene_t {
-    QByteArrayData data[9];
+    const uint offsetsAndSize[18];
     char stringdata0[61];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_Qamgraphicsscene_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(offsetof(qt_meta_stringdata_Qamgraphicsscene_t, stringdata0) + ofs), len 
 static const qt_meta_stringdata_Qamgraphicsscene_t qt_meta_stringdata_Qamgraphicsscene = {
     {
-QT_MOC_LITERAL(0, 0, 16), // "Qamgraphicsscene"
-QT_MOC_LITERAL(1, 17, 10), // "mousePoint"
-QT_MOC_LITERAL(2, 28, 0), // ""
-QT_MOC_LITERAL(3, 29, 1), // "x"
-QT_MOC_LITERAL(4, 31, 1), // "y"
-QT_MOC_LITERAL(5, 33, 13), // "mousePosition"
-QT_MOC_LITERAL(6, 47, 9), // "mouseRect"
-QT_MOC_LITERAL(7, 57, 1), // "w"
-QT_MOC_LITERAL(8, 59, 1) // "h"
+QT_MOC_LITERAL(0, 16), // "Qamgraphicsscene"
+QT_MOC_LITERAL(17, 10), // "mousePoint"
+QT_MOC_LITERAL(28, 0), // ""
+QT_MOC_LITERAL(29, 1), // "x"
+QT_MOC_LITERAL(31, 1), // "y"
+QT_MOC_LITERAL(33, 13), // "mousePosition"
+QT_MOC_LITERAL(47, 9), // "mouseRect"
+QT_MOC_LITERAL(57, 1), // "w"
+QT_MOC_LITERAL(59, 1) // "h"
 
     },
     "Qamgraphicsscene\0mousePoint\0\0x\0y\0"
@@ -51,7 +48,7 @@ QT_MOC_LITERAL(8, 59, 1) // "h"
 static const uint qt_meta_data_Qamgraphicsscene[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        3,   14, // methods
@@ -61,10 +58,10 @@ static const uint qt_meta_data_Qamgraphicsscene[] = {
        0,       // flags
        3,       // signalCount
 
- // signals: name, argc, parameters, tag, flags
-       1,    2,   29,    2, 0x06 /* Public */,
-       5,    2,   34,    2, 0x06 /* Public */,
-       6,    4,   39,    2, 0x06 /* Public */,
+ // signals: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    2,   32,    2, 0x06,    1 /* Public */,
+       5,    2,   37,    2, 0x06,    4 /* Public */,
+       6,    4,   42,    2, 0x06,    7 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int, QMetaType::Int,    3,    4,
@@ -80,9 +77,9 @@ void Qamgraphicsscene::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         auto *_t = static_cast<Qamgraphicsscene *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->mousePoint((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 1: _t->mousePosition((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 2: _t->mouseRect((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4]))); break;
+        case 0: _t->mousePoint((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 1: _t->mousePosition((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 2: _t->mouseRect((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -111,12 +108,18 @@ void Qamgraphicsscene::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
     }
 }
 
-QT_INIT_METAOBJECT const QMetaObject Qamgraphicsscene::staticMetaObject = { {
+const QMetaObject Qamgraphicsscene::staticMetaObject = { {
     QMetaObject::SuperData::link<QGraphicsScene::staticMetaObject>(),
-    qt_meta_stringdata_Qamgraphicsscene.data,
+    qt_meta_stringdata_Qamgraphicsscene.offsetsAndSize,
     qt_meta_data_Qamgraphicsscene,
     qt_static_metacall,
     nullptr,
+qt_incomplete_metaTypeArray<qt_meta_stringdata_Qamgraphicsscene_t
+, QtPrivate::TypeAndForceComplete<Qamgraphicsscene, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>
+
+
+
+>,
     nullptr
 } };
 
@@ -145,7 +148,7 @@ int Qamgraphicsscene::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 3)
-            *reinterpret_cast<int*>(_a[0]) = -1;
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
         _id -= 3;
     }
     return _id;

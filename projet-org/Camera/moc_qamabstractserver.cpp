@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'qamabstractserver.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.2.4)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,8 +12,8 @@
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'qamabstractserver.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.15.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.2.4. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -22,22 +22,19 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_QamAbstractServer_t {
-    QByteArrayData data[6];
+    const uint offsetsAndSize[12];
     char stringdata0[56];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_QamAbstractServer_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(offsetof(qt_meta_stringdata_QamAbstractServer_t, stringdata0) + ofs), len 
 static const qt_meta_stringdata_QamAbstractServer_t qt_meta_stringdata_QamAbstractServer = {
     {
-QT_MOC_LITERAL(0, 0, 17), // "QamAbstractServer"
-QT_MOC_LITERAL(1, 18, 7), // "request"
-QT_MOC_LITERAL(2, 26, 0), // ""
-QT_MOC_LITERAL(3, 27, 11), // "networkInfo"
-QT_MOC_LITERAL(4, 39, 7), // "message"
-QT_MOC_LITERAL(5, 47, 8) // "response"
+QT_MOC_LITERAL(0, 17), // "QamAbstractServer"
+QT_MOC_LITERAL(18, 7), // "request"
+QT_MOC_LITERAL(26, 0), // ""
+QT_MOC_LITERAL(27, 11), // "networkInfo"
+QT_MOC_LITERAL(39, 7), // "message"
+QT_MOC_LITERAL(47, 8) // "response"
 
     },
     "QamAbstractServer\0request\0\0networkInfo\0"
@@ -48,7 +45,7 @@ QT_MOC_LITERAL(5, 47, 8) // "response"
 static const uint qt_meta_data_QamAbstractServer[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        3,   14, // methods
@@ -58,12 +55,12 @@ static const uint qt_meta_data_QamAbstractServer[] = {
        0,       // flags
        1,       // signalCount
 
- // signals: name, argc, parameters, tag, flags
-       1,    1,   29,    2, 0x06 /* Public */,
+ // signals: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    1,   32,    2, 0x06,    1 /* Public */,
 
- // slots: name, argc, parameters, tag, flags
-       3,    1,   32,    2, 0x0a /* Public */,
-       5,    1,   35,    2, 0x0a /* Public */,
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       3,    1,   35,    2, 0x0a,    3 /* Public */,
+       5,    1,   38,    2, 0x0a,    5 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QByteArray,    1,
@@ -81,9 +78,9 @@ void QamAbstractServer::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
         auto *_t = static_cast<QamAbstractServer *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->request((*reinterpret_cast< QByteArray(*)>(_a[1]))); break;
-        case 1: _t->networkInfo((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 2: _t->response((*reinterpret_cast< QByteArray(*)>(_a[1]))); break;
+        case 0: _t->request((*reinterpret_cast< std::add_pointer_t<QByteArray>>(_a[1]))); break;
+        case 1: _t->networkInfo((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 2: _t->response((*reinterpret_cast< std::add_pointer_t<QByteArray>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -98,12 +95,18 @@ void QamAbstractServer::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
     }
 }
 
-QT_INIT_METAOBJECT const QMetaObject QamAbstractServer::staticMetaObject = { {
+const QMetaObject QamAbstractServer::staticMetaObject = { {
     QMetaObject::SuperData::link<QObject::staticMetaObject>(),
-    qt_meta_stringdata_QamAbstractServer.data,
+    qt_meta_stringdata_QamAbstractServer.offsetsAndSize,
     qt_meta_data_QamAbstractServer,
     qt_static_metacall,
     nullptr,
+qt_incomplete_metaTypeArray<qt_meta_stringdata_QamAbstractServer_t
+, QtPrivate::TypeAndForceComplete<QamAbstractServer, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QByteArray, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QByteArray, std::false_type>
+
+
+>,
     nullptr
 } };
 
@@ -132,7 +135,7 @@ int QamAbstractServer::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 3)
-            *reinterpret_cast<int*>(_a[0]) = -1;
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
         _id -= 3;
     }
     return _id;

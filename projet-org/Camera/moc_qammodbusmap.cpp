@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'qammodbusmap.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.2.4)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,8 +12,8 @@
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'qammodbusmap.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.15.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.2.4. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -22,31 +22,28 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_QamModbusMap_t {
-    QByteArrayData data[15];
+    const uint offsetsAndSize[30];
     char stringdata0[137];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_QamModbusMap_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(offsetof(qt_meta_stringdata_QamModbusMap_t, stringdata0) + ofs), len 
 static const qt_meta_stringdata_QamModbusMap_t qt_meta_stringdata_QamModbusMap = {
     {
-QT_MOC_LITERAL(0, 0, 12), // "QamModbusMap"
-QT_MOC_LITERAL(1, 13, 12), // "responseDone"
-QT_MOC_LITERAL(2, 26, 0), // ""
-QT_MOC_LITERAL(3, 27, 12), // "valueChanged"
-QT_MOC_LITERAL(4, 40, 5), // "table"
-QT_MOC_LITERAL(5, 46, 4), // "name"
-QT_MOC_LITERAL(6, 51, 4), // "info"
-QT_MOC_LITERAL(7, 56, 6), // "source"
-QT_MOC_LITERAL(8, 63, 7), // "message"
-QT_MOC_LITERAL(9, 71, 8), // "response"
-QT_MOC_LITERAL(10, 80, 8), // "setValue"
-QT_MOC_LITERAL(11, 89, 12), // "PrimaryTable"
-QT_MOC_LITERAL(12, 102, 5), // "value"
-QT_MOC_LITERAL(13, 108, 13), // "setLocalValue"
-QT_MOC_LITERAL(14, 122, 14) // "setRemoteValue"
+QT_MOC_LITERAL(0, 12), // "QamModbusMap"
+QT_MOC_LITERAL(13, 12), // "responseDone"
+QT_MOC_LITERAL(26, 0), // ""
+QT_MOC_LITERAL(27, 12), // "valueChanged"
+QT_MOC_LITERAL(40, 5), // "table"
+QT_MOC_LITERAL(46, 4), // "name"
+QT_MOC_LITERAL(51, 4), // "info"
+QT_MOC_LITERAL(56, 6), // "source"
+QT_MOC_LITERAL(63, 7), // "message"
+QT_MOC_LITERAL(71, 8), // "response"
+QT_MOC_LITERAL(80, 8), // "setValue"
+QT_MOC_LITERAL(89, 12), // "PrimaryTable"
+QT_MOC_LITERAL(102, 5), // "value"
+QT_MOC_LITERAL(108, 13), // "setLocalValue"
+QT_MOC_LITERAL(122, 14) // "setRemoteValue"
 
     },
     "QamModbusMap\0responseDone\0\0valueChanged\0"
@@ -59,7 +56,7 @@ QT_MOC_LITERAL(14, 122, 14) // "setRemoteValue"
 static const uint qt_meta_data_QamModbusMap[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        7,   14, // methods
@@ -69,16 +66,16 @@ static const uint qt_meta_data_QamModbusMap[] = {
        0,       // flags
        3,       // signalCount
 
- // signals: name, argc, parameters, tag, flags
-       1,    0,   49,    2, 0x06 /* Public */,
-       3,    2,   50,    2, 0x06 /* Public */,
-       6,    2,   55,    2, 0x06 /* Public */,
+ // signals: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    0,   56,    2, 0x06,    1 /* Public */,
+       3,    2,   57,    2, 0x06,    2 /* Public */,
+       6,    2,   62,    2, 0x06,    5 /* Public */,
 
- // slots: name, argc, parameters, tag, flags
-       9,    1,   60,    2, 0x0a /* Public */,
-      10,    3,   63,    2, 0x0a /* Public */,
-      13,    3,   70,    2, 0x0a /* Public */,
-      14,    3,   77,    2, 0x0a /* Public */,
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       9,    1,   67,    2, 0x0a,    8 /* Public */,
+      10,    3,   70,    2, 0x0a,   10 /* Public */,
+      13,    3,   77,    2, 0x0a,   14 /* Public */,
+      14,    3,   84,    2, 0x0a,   18 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -101,12 +98,12 @@ void QamModbusMap::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         (void)_t;
         switch (_id) {
         case 0: _t->responseDone(); break;
-        case 1: _t->valueChanged((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
-        case 2: _t->info((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
-        case 3: _t->response((*reinterpret_cast< QByteArray(*)>(_a[1]))); break;
-        case 4: _t->setValue((*reinterpret_cast< PrimaryTable(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3]))); break;
-        case 5: _t->setLocalValue((*reinterpret_cast< PrimaryTable(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3]))); break;
-        case 6: _t->setRemoteValue((*reinterpret_cast< PrimaryTable(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3]))); break;
+        case 1: _t->valueChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 2: _t->info((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 3: _t->response((*reinterpret_cast< std::add_pointer_t<QByteArray>>(_a[1]))); break;
+        case 4: _t->setValue((*reinterpret_cast< std::add_pointer_t<PrimaryTable>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
+        case 5: _t->setLocalValue((*reinterpret_cast< std::add_pointer_t<PrimaryTable>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
+        case 6: _t->setRemoteValue((*reinterpret_cast< std::add_pointer_t<PrimaryTable>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -135,12 +132,18 @@ void QamModbusMap::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
     }
 }
 
-QT_INIT_METAOBJECT const QMetaObject QamModbusMap::staticMetaObject = { {
+const QMetaObject QamModbusMap::staticMetaObject = { {
     QMetaObject::SuperData::link<QamAbstractServer::staticMetaObject>(),
-    qt_meta_stringdata_QamModbusMap.data,
+    qt_meta_stringdata_QamModbusMap.offsetsAndSize,
     qt_meta_data_QamModbusMap,
     qt_static_metacall,
     nullptr,
+qt_incomplete_metaTypeArray<qt_meta_stringdata_QamModbusMap_t
+, QtPrivate::TypeAndForceComplete<QamModbusMap, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QByteArray, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<PrimaryTable, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<PrimaryTable, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<PrimaryTable, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>
+
+
+>,
     nullptr
 } };
 
@@ -169,7 +172,7 @@ int QamModbusMap::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 7)
-            *reinterpret_cast<int*>(_a[0]) = -1;
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
         _id -= 7;
     }
     return _id;

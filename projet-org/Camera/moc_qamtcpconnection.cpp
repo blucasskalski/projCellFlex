@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'qamtcpconnection.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.8)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.2.4)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,8 +12,8 @@
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'qamtcpconnection.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.15.8. It"
+#elif Q_MOC_OUTPUT_REVISION != 68
+#error "This file was generated using the moc from 6.2.4. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -22,20 +22,17 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_QamTcpConnection_t {
-    QByteArrayData data[4];
+    const uint offsetsAndSize[8];
     char stringdata0[41];
 };
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_QamTcpConnection_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
+#define QT_MOC_LITERAL(ofs, len) \
+    uint(offsetof(qt_meta_stringdata_QamTcpConnection_t, stringdata0) + ofs), len 
 static const qt_meta_stringdata_QamTcpConnection_t qt_meta_stringdata_QamTcpConnection = {
     {
-QT_MOC_LITERAL(0, 0, 16), // "QamTcpConnection"
-QT_MOC_LITERAL(1, 17, 9), // "readyRead"
-QT_MOC_LITERAL(2, 27, 0), // ""
-QT_MOC_LITERAL(3, 28, 12) // "disconnected"
+QT_MOC_LITERAL(0, 16), // "QamTcpConnection"
+QT_MOC_LITERAL(17, 9), // "readyRead"
+QT_MOC_LITERAL(27, 0), // ""
+QT_MOC_LITERAL(28, 12) // "disconnected"
 
     },
     "QamTcpConnection\0readyRead\0\0disconnected"
@@ -45,7 +42,7 @@ QT_MOC_LITERAL(3, 28, 12) // "disconnected"
 static const uint qt_meta_data_QamTcpConnection[] = {
 
  // content:
-       8,       // revision
+      10,       // revision
        0,       // classname
        0,    0, // classinfo
        2,   14, // methods
@@ -55,9 +52,9 @@ static const uint qt_meta_data_QamTcpConnection[] = {
        0,       // flags
        0,       // signalCount
 
- // slots: name, argc, parameters, tag, flags
-       1,    0,   24,    2, 0x08 /* Private */,
-       3,    0,   25,    2, 0x08 /* Private */,
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    0,   26,    2, 0x08,    1 /* Private */,
+       3,    0,   27,    2, 0x08,    2 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -80,12 +77,18 @@ void QamTcpConnection::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
     (void)_a;
 }
 
-QT_INIT_METAOBJECT const QMetaObject QamTcpConnection::staticMetaObject = { {
+const QMetaObject QamTcpConnection::staticMetaObject = { {
     QMetaObject::SuperData::link<QThread::staticMetaObject>(),
-    qt_meta_stringdata_QamTcpConnection.data,
+    qt_meta_stringdata_QamTcpConnection.offsetsAndSize,
     qt_meta_data_QamTcpConnection,
     qt_static_metacall,
     nullptr,
+qt_incomplete_metaTypeArray<qt_meta_stringdata_QamTcpConnection_t
+, QtPrivate::TypeAndForceComplete<QamTcpConnection, std::true_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+
+
+>,
     nullptr
 } };
 
@@ -114,7 +117,7 @@ int QamTcpConnection::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 2)
-            *reinterpret_cast<int*>(_a[0]) = -1;
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
         _id -= 2;
     }
     return _id;

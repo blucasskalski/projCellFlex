@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'camera.h'
 **
-** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.2.4)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -10,90 +10,58 @@
 #include "camera.h"
 #include <QtGui/qtextcursor.h>
 #include <QtNetwork/QSslError>
+#include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'camera.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 68
-#error "This file was generated using the moc from 6.4.2. It"
+#error "This file was generated using the moc from 6.2.4. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
-#endif
-
-#ifndef Q_CONSTINIT
-#define Q_CONSTINIT
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-namespace {
 struct qt_meta_stringdata_camera_t {
-    uint offsetsAndSizes[36];
-    char stringdata0[7];
-    char stringdata1[17];
-    char stringdata2[1];
-    char stringdata3[28];
-    char stringdata4[11];
-    char stringdata5[18];
-    char stringdata6[17];
-    char stringdata7[11];
-    char stringdata8[7];
-    char stringdata9[12];
-    char stringdata10[12];
-    char stringdata11[14];
-    char stringdata12[14];
-    char stringdata13[14];
-    char stringdata14[12];
-    char stringdata15[15];
-    char stringdata16[13];
-    char stringdata17[15];
+    const uint offsetsAndSize[36];
+    char stringdata0[238];
 };
 #define QT_MOC_LITERAL(ofs, len) \
-    uint(sizeof(qt_meta_stringdata_camera_t::offsetsAndSizes) + ofs), len 
-Q_CONSTINIT static const qt_meta_stringdata_camera_t qt_meta_stringdata_camera = {
+    uint(offsetof(qt_meta_stringdata_camera_t, stringdata0) + ofs), len 
+static const qt_meta_stringdata_camera_t qt_meta_stringdata_camera = {
     {
-        QT_MOC_LITERAL(0, 6),  // "camera"
-        QT_MOC_LITERAL(7, 16),  // "erreurConnection"
-        QT_MOC_LITERAL(24, 0),  // ""
-        QT_MOC_LITERAL(25, 27),  // "QNetworkReply::NetworkError"
-        QT_MOC_LITERAL(53, 10),  // "connection"
-        QT_MOC_LITERAL(64, 17),  // "reponse_connexion"
-        QT_MOC_LITERAL(82, 16),  // "traitement_photo"
-        QT_MOC_LITERAL(99, 10),  // "mousepoint"
-        QT_MOC_LITERAL(110, 6),  // "config"
-        QT_MOC_LITERAL(117, 11),  // "valeur_bin1"
-        QT_MOC_LITERAL(129, 11),  // "valeur_bin2"
-        QT_MOC_LITERAL(141, 13),  // "valeur_blanc1"
-        QT_MOC_LITERAL(155, 13),  // "valeur_blanc2"
-        QT_MOC_LITERAL(169, 13),  // "message_photo"
-        QT_MOC_LITERAL(183, 11),  // "save_config"
-        QT_MOC_LITERAL(195, 14),  // "traitement_spe"
-        QT_MOC_LITERAL(210, 12),  // "creation_BdD"
-        QT_MOC_LITERAL(223, 14)   // "reglage_button"
+QT_MOC_LITERAL(0, 6), // "camera"
+QT_MOC_LITERAL(7, 16), // "erreurConnection"
+QT_MOC_LITERAL(24, 0), // ""
+QT_MOC_LITERAL(25, 27), // "QNetworkReply::NetworkError"
+QT_MOC_LITERAL(53, 10), // "connection"
+QT_MOC_LITERAL(64, 17), // "reponse_connexion"
+QT_MOC_LITERAL(82, 16), // "traitement_photo"
+QT_MOC_LITERAL(99, 10), // "mousepoint"
+QT_MOC_LITERAL(110, 6), // "config"
+QT_MOC_LITERAL(117, 11), // "valeur_bin1"
+QT_MOC_LITERAL(129, 11), // "valeur_bin2"
+QT_MOC_LITERAL(141, 13), // "valeur_blanc1"
+QT_MOC_LITERAL(155, 13), // "valeur_blanc2"
+QT_MOC_LITERAL(169, 13), // "message_photo"
+QT_MOC_LITERAL(183, 11), // "save_config"
+QT_MOC_LITERAL(195, 14), // "traitement_spe"
+QT_MOC_LITERAL(210, 12), // "creation_BdD"
+QT_MOC_LITERAL(223, 14) // "reglage_button"
+
     },
-    "camera",
-    "erreurConnection",
-    "",
-    "QNetworkReply::NetworkError",
-    "connection",
-    "reponse_connexion",
-    "traitement_photo",
-    "mousepoint",
-    "config",
-    "valeur_bin1",
-    "valeur_bin2",
-    "valeur_blanc1",
-    "valeur_blanc2",
-    "message_photo",
-    "save_config",
-    "traitement_spe",
-    "creation_BdD",
+    "camera\0erreurConnection\0\0"
+    "QNetworkReply::NetworkError\0connection\0"
+    "reponse_connexion\0traitement_photo\0"
+    "mousepoint\0config\0valeur_bin1\0valeur_bin2\0"
+    "valeur_blanc1\0valeur_blanc2\0message_photo\0"
+    "save_config\0traitement_spe\0creation_BdD\0"
     "reglage_button"
 };
 #undef QT_MOC_LITERAL
-} // unnamed namespace
 
-Q_CONSTINIT static const uint qt_meta_data_camera[] = {
+static const uint qt_meta_data_camera[] = {
 
  // content:
       10,       // revision
@@ -143,58 +111,6 @@ Q_CONSTINIT static const uint qt_meta_data_camera[] = {
        0        // eod
 };
 
-Q_CONSTINIT const QMetaObject camera::staticMetaObject = { {
-    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
-    qt_meta_stringdata_camera.offsetsAndSizes,
-    qt_meta_data_camera,
-    qt_static_metacall,
-    nullptr,
-    qt_incomplete_metaTypeArray<qt_meta_stringdata_camera_t,
-        // Q_OBJECT / Q_GADGET
-        QtPrivate::TypeAndForceComplete<camera, std::true_type>,
-        // method 'erreurConnection'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QNetworkReply::NetworkError, std::false_type>,
-        // method 'connection'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'reponse_connexion'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'traitement_photo'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'mousepoint'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        // method 'config'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'valeur_bin1'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        // method 'valeur_bin2'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        // method 'valeur_blanc1'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        // method 'valeur_blanc2'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        // method 'message_photo'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'save_config'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'traitement_spe'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'creation_BdD'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'reglage_button'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
-    >,
-    nullptr
-} };
-
 void camera::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
@@ -231,6 +147,22 @@ void camera::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         }
     }
 }
+
+const QMetaObject camera::staticMetaObject = { {
+    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
+    qt_meta_stringdata_camera.offsetsAndSize,
+    qt_meta_data_camera,
+    qt_static_metacall,
+    nullptr,
+qt_incomplete_metaTypeArray<qt_meta_stringdata_camera_t
+, QtPrivate::TypeAndForceComplete<camera, std::true_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QNetworkReply::NetworkError, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+
+
+>,
+    nullptr
+} };
+
 
 const QMetaObject *camera::metaObject() const
 {

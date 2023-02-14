@@ -1,55 +1,45 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'qamimghistogram.h'
 **
-** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.2)
+** Created by: The Qt Meta Object Compiler version 68 (Qt 6.2.4)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
 #include <memory>
 #include "qamimghistogram.h"
+#include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'qamimghistogram.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 68
-#error "This file was generated using the moc from 6.4.2. It"
+#error "This file was generated using the moc from 6.2.4. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
-#endif
-
-#ifndef Q_CONSTINIT
-#define Q_CONSTINIT
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-namespace {
 struct qt_meta_stringdata_QamImgHistogram_t {
-    uint offsetsAndSizes[8];
-    char stringdata0[16];
-    char stringdata1[10];
-    char stringdata2[1];
-    char stringdata3[6];
+    const uint offsetsAndSize[8];
+    char stringdata0[33];
 };
 #define QT_MOC_LITERAL(ofs, len) \
-    uint(sizeof(qt_meta_stringdata_QamImgHistogram_t::offsetsAndSizes) + ofs), len 
-Q_CONSTINIT static const qt_meta_stringdata_QamImgHistogram_t qt_meta_stringdata_QamImgHistogram = {
+    uint(offsetof(qt_meta_stringdata_QamImgHistogram_t, stringdata0) + ofs), len 
+static const qt_meta_stringdata_QamImgHistogram_t qt_meta_stringdata_QamImgHistogram = {
     {
-        QT_MOC_LITERAL(0, 15),  // "QamImgHistogram"
-        QT_MOC_LITERAL(16, 9),  // "xTracking"
-        QT_MOC_LITERAL(26, 0),  // ""
-        QT_MOC_LITERAL(27, 5)   // "xClic"
+QT_MOC_LITERAL(0, 15), // "QamImgHistogram"
+QT_MOC_LITERAL(16, 9), // "xTracking"
+QT_MOC_LITERAL(26, 0), // ""
+QT_MOC_LITERAL(27, 5) // "xClic"
+
     },
-    "QamImgHistogram",
-    "xTracking",
-    "",
-    "xClic"
+    "QamImgHistogram\0xTracking\0\0xClic"
 };
 #undef QT_MOC_LITERAL
-} // unnamed namespace
 
-Q_CONSTINIT static const uint qt_meta_data_QamImgHistogram[] = {
+static const uint qt_meta_data_QamImgHistogram[] = {
 
  // content:
       10,       // revision
@@ -73,25 +63,6 @@ Q_CONSTINIT static const uint qt_meta_data_QamImgHistogram[] = {
        0        // eod
 };
 
-Q_CONSTINIT const QMetaObject QamImgHistogram::staticMetaObject = { {
-    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
-    qt_meta_stringdata_QamImgHistogram.offsetsAndSizes,
-    qt_meta_data_QamImgHistogram,
-    qt_static_metacall,
-    nullptr,
-    qt_incomplete_metaTypeArray<qt_meta_stringdata_QamImgHistogram_t,
-        // Q_OBJECT / Q_GADGET
-        QtPrivate::TypeAndForceComplete<QamImgHistogram, std::true_type>,
-        // method 'xTracking'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        // method 'xClic'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>
-    >,
-    nullptr
-} };
-
 void QamImgHistogram::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
@@ -106,20 +77,36 @@ void QamImgHistogram::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         int *result = reinterpret_cast<int *>(_a[0]);
         {
             using _t = void (QamImgHistogram::*)(int );
-            if (_t _q_method = &QamImgHistogram::xTracking; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&QamImgHistogram::xTracking)) {
                 *result = 0;
                 return;
             }
         }
         {
             using _t = void (QamImgHistogram::*)(int );
-            if (_t _q_method = &QamImgHistogram::xClic; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&QamImgHistogram::xClic)) {
                 *result = 1;
                 return;
             }
         }
     }
 }
+
+const QMetaObject QamImgHistogram::staticMetaObject = { {
+    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
+    qt_meta_stringdata_QamImgHistogram.offsetsAndSize,
+    qt_meta_data_QamImgHistogram,
+    qt_static_metacall,
+    nullptr,
+qt_incomplete_metaTypeArray<qt_meta_stringdata_QamImgHistogram_t
+, QtPrivate::TypeAndForceComplete<QamImgHistogram, std::true_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<int, std::false_type>
+
+
+
+>,
+    nullptr
+} };
+
 
 const QMetaObject *QamImgHistogram::metaObject() const
 {
