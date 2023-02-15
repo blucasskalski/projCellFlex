@@ -71,7 +71,7 @@ public:
     {
         if (camera->objectName().isEmpty())
             camera->setObjectName("camera");
-        camera->resize(1280, 1070);
+        camera->resize(1280, 1000);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -80,7 +80,7 @@ public:
         camera->setMinimumSize(QSize(1280, 1000));
         verticalLayoutWidget = new QWidget(camera);
         verticalLayoutWidget->setObjectName("verticalLayoutWidget");
-        verticalLayoutWidget->setGeometry(QRect(1110, 520, 141, 50));
+        verticalLayoutWidget->setGeometry(QRect(1110, 520, 157, 54));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
@@ -133,7 +133,7 @@ public:
 
         layoutWidget2 = new QWidget(camera);
         layoutWidget2->setObjectName("layoutWidget2");
-        layoutWidget2->setGeometry(QRect(650, 520, 122, 51));
+        layoutWidget2->setGeometry(QRect(650, 520, 122, 55));
         horizontalLayout_10 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_10->setSpacing(6);
         horizontalLayout_10->setContentsMargins(11, 11, 11, 11);
@@ -231,7 +231,7 @@ public:
 
         layoutWidget4 = new QWidget(camera);
         layoutWidget4->setObjectName("layoutWidget4");
-        layoutWidget4->setGeometry(QRect(940, 520, 161, 25));
+        layoutWidget4->setGeometry(QRect(940, 520, 161, 27));
         verticalLayout_5 = new QVBoxLayout(layoutWidget4);
         verticalLayout_5->setSpacing(6);
         verticalLayout_5->setContentsMargins(11, 11, 11, 11);
@@ -246,7 +246,7 @@ public:
 
         layoutWidget5 = new QWidget(camera);
         layoutWidget5->setObjectName("layoutWidget5");
-        layoutWidget5->setGeometry(QRect(640, 970, 621, 25));
+        layoutWidget5->setGeometry(QRect(640, 970, 621, 27));
         horizontalLayout_3 = new QHBoxLayout(layoutWidget5);
         horizontalLayout_3->setSpacing(6);
         horizontalLayout_3->setContentsMargins(11, 11, 11, 11);
@@ -269,12 +269,14 @@ public:
 
         exit = new QPushButton(layoutWidget5);
         exit->setObjectName("exit");
+        exit->setEnabled(true);
+        exit->setCheckable(false);
 
         horizontalLayout_3->addWidget(exit);
 
         horizontalLayoutWidget = new QWidget(camera);
         horizontalLayoutWidget->setObjectName("horizontalLayoutWidget");
-        horizontalLayoutWidget->setGeometry(QRect(940, 550, 160, 25));
+        horizontalLayoutWidget->setGeometry(QRect(940, 550, 160, 27));
         horizontalLayout_2 = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setContentsMargins(11, 11, 11, 11);

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1280</width>
-    <height>1070</height>
+    <height>1000</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -30,8 +30,8 @@
     <rect>
      <x>1110</x>
      <y>520</y>
-     <width>141</width>
-     <height>50</height>
+     <width>157</width>
+     <height>54</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -128,7 +128,7 @@
      <x>650</x>
      <y>520</y>
      <width>122</width>
-     <height>51</height>
+     <height>55</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_10">
@@ -279,7 +279,7 @@
      <x>940</x>
      <y>520</y>
      <width>161</width>
-     <height>25</height>
+     <height>27</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -304,7 +304,7 @@
      <x>640</x>
      <y>970</y>
      <width>621</width>
-     <height>25</height>
+     <height>27</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -339,8 +339,14 @@
     </item>
     <item>
      <widget class="QPushButton" name="exit">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="text">
        <string>Quitter</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
       </property>
      </widget>
     </item>
@@ -352,7 +358,7 @@
      <x>940</x>
      <y>550</y>
      <width>160</width>
-     <height>25</height>
+     <height>27</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_2">

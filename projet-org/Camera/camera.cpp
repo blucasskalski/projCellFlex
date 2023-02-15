@@ -53,7 +53,7 @@ camera::camera(QWidget *parent) :
     connect(scene_config, SIGNAL(mouseRect(int,int, int, int)), this, SLOT(mousepoint(int,int, int,int)));
 
     //création du serveur Modbus
-    QString csv = "/home/cellflex-vision/Documents/projet/config/cellflex_vision.csv";
+    QString csv = "/home/vision/projCellFlex/projet-org/config/cellflex_vision.csv";
     ecrir_log("Chargement du CSV Modbus");
 
     //création de la map
@@ -71,6 +71,7 @@ camera::camera(QWidget *parent) :
     attente = new Communication(this, m_map); //création de la thread
     connect(attente, SIGNAL(faire_traitement()), this, SLOT(traitement_photo()));
     connect(ui->exit,SIGNAL(clicked()), attente, SLOT(arret()));
+    ui->exit->setEnabled(true);
     ecrir_log("Lancement du thread Modbus");
 
     connect(ui->connexion,SIGNAL(clicked()), this, SLOT(connection()) );
@@ -276,7 +277,7 @@ void camera::traitement_photo()
 
 void camera::reconnaissance()
 {
-    QFile file("/home/cellflex-vision/Documents/projet/config/BDD.csv");
+    QFile file("/home/vision/projCellFlex/projet-org/config/BDD.csv");
     if(tempo == 0 || tempo == 1)  ecrir_log("chargement de la BDD");
     int bit_grid= 0, bit_line1=0 , bit_line2=0;
     bool diff_densite = false;
@@ -559,7 +560,7 @@ void camera::valeur_blanc2(int val)
 void camera::config()
 {
     /*QImage* image_bdd = new QImage();
-    image_bdd->load("/home/cellflex-vision/Documents/projet/Base/R2.png");*/
+    image_bdd->load("/home/vision/projCellFlex/projet-org/Base/R2.png");*/
     QGraphicsPixmapItem* conf = new QGraphicsPixmapItem((QPixmap::fromImage(image)));
     //QGraphicsPixmapItem* conf = new QGraphicsPixmapItem((QPixmap::fromImage(*image_bdd)));
     netoyage_bin();
@@ -675,7 +676,7 @@ bool camera::comparaison_densite(float BDD, float actuel)
 
 void camera::creation_BdD()
 {
-   QDir dir("/home/cellflex-vision/Documents/projet/Base" );
+   QDir dir("/home/vision/projCellFlex/projet-org/Base" );
    QStringList filters("*.png");
    dir.setNameFilters(filters);
    QStringList list(dir.entryList());
@@ -692,7 +693,7 @@ void camera::creation_BdD()
    QamImgProcessor * traitement = new QamImgProcessor();
 
    //fichier BdD
-   QFile file("/home/cellflex-vision/Documents/projet/config/BDD.csv");
+   QFile file("/home/vision/projCellFlex/projet-org/config/BDD.csv");
    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) qDebug() << Qt::endl << "erreure fichier";
    QTextStream flux(&file);
    flux.setEncoding(QStringConverter::Utf8);
@@ -704,7 +705,7 @@ void camera::creation_BdD()
    {
 
 
-       src->load(("/home/cellflex-vision/Documents/projet/Base/"+list.at(i)),"PNG");
+       src->load(("/home/vision/projCellFlex/projet-org/Base/"+list.at(i)),"PNG");
 
        QImage * dest = new QImage(*src);
 
@@ -762,14 +763,14 @@ void camera::creation_BdD()
        }
        if(i ==0)
        {
-           if( !dest1->save(QString("/home/cellflex-vision/Documents/projet/Base_bin/0"),"PNG"))
+           if( !dest1->save(QString("/home/vision/projCellFlex/projet-org/Base_bin/0"),"PNG"))
            {
                std::cout << "erreur photo !" << std::endl;
            }
        }
        else if( i != 0)
        {
-            if( !dest1->save(QString("/home/cellflex-vision/Documents/projet/Base_bin/"+list.at(i)),"PNG"))
+            if( !dest1->save(QString("/home/vision/projCellFlex/projet-org/Base_bin/"+list.at(i)),"PNG"))
             {
                 std::cout << "erreur photo !" << std::endl;
             }
