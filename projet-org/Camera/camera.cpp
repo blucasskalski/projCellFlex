@@ -9,13 +9,12 @@ camera::camera(QWidget *parent) :
 
     reglage();
 
-    ecrir_log("*****************************************************************************************************");
+    ecrir_log("************************************************************************************");
     ecrir_log("*\t\t\t\t\t\t                               *");
-    ecrir_log("*\t*---\t        Poste Vison du projet Cellflex 2014 \t---*                          *");
-    ecrir_log("*\t*---\t            Réalisé par NOTTET Alexandre    \t---*                          *");
-    ecrir_log("*\t*---\t                    Version 1.0             \t\t---*                          *");
+    ecrir_log("*\t*---\t        V CELLFLEX 2023 \t---*                          *");
+    ecrir_log("*\t*---\t              V2.0a    \t\t---*                          *");
     ecrir_log("*\t\t\t\t\t\t                               *");
-    ecrir_log("*****************************************************************************************************");
+    ecrir_log("************************************************************************************");
     ecrir_log("");
 
     ecrir_log("Démarrage du Poste Camera");

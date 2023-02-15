@@ -1,6 +1,0 @@
-#!/bin/bash
-
-sudo ./Camera
-
-exit 0
-
