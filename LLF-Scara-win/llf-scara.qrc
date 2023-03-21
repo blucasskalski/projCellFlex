@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/puzzle">
+        <file>images/A1.png</file>
+        <file>images/A2.png</file>
+        <file>images/A3.png</file>
+        <file>images/A4.png</file>
+        <file>images/B1.png</file>
+        <file>images/B2.png</file>
+        <file>images/B3.png</file>
+        <file>images/B4.png</file>
+        <file>images/C1.png</file>
+        <file>images/C2.png</file>
+        <file>images/C3.png</file>
+        <file>images/C4.png</file>
+        <file>images/D1.png</file>
+        <file>images/D2.png</file>
+        <file>images/D3.png</file>
+        <file>images/D4.png</file>
+        <file>images/E1.png</file>
+        <file>images/E2.png</file>
+        <file>images/E3.png</file>
+        <file>images/E4.png</file>
+    </qresource>
+</RCC>

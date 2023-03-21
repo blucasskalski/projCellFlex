@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 4.1.3.2 (MacOSX)">
+	<META NAME="AUTHOR" CONTENT="Alain Menu">
+	<META NAME="CREATED" CONTENT="20140404;100248864661000">
+	<META NAME="CHANGEDBY" CONTENT="Alain Menu">
+	<META NAME="CHANGED" CONTENT="20140404;114332922037000">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		H1 { margin-bottom: 0.21cm }
+		H1.western { font-family: "Arial", sans-serif; font-size: 16pt }
+		H1.cjk { font-family: "SimSun"; font-size: 16pt }
+		H1.ctl { font-family: "Lucida Sans"; font-size: 16pt }
+		H2 { margin-bottom: 0.21cm }
+		H2.western { font-family: "Arial", sans-serif; font-size: 14pt; font-style: italic }
+		H2.cjk { font-family: "SimSun"; font-size: 14pt; font-style: italic }
+		H2.ctl { font-family: "Lucida Sans"; font-size: 14pt; font-style: italic }
+		A:link { so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="fr-FR" DIR="LTR">
+<P ALIGN=CENTER STYLE="margin-top: 0.42cm; page-break-after: avoid"><FONT FACE="Arial, sans-serif"><FONT SIZE=5><B>LLF
+Scara Help Page</B></FONT></FONT></P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">«&nbsp;LLF Cellflex
+Scara&nbsp;» est un logiciel de pilotage du poste D (Scara) du
+projet Cellflex du Lycée La Fayette (sections de STS ET et IRIS). Ce
+projet concerne l’assemblage automatique d’un puzzle de 20 pièces
+représentant le logotype de l’établissement.</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H1 CLASS="western">Brève présentation du robot</H1>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Le robot Scara utilisé
+est un modèle 5 axes basé sur des éléments linéaires et rotatifs
+de type «&nbsp;PowerCube&nbsp;» reliés par bus CAN.</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0.2cm"><BR><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0.2cm">On considère le robot
+posé sur le plan orthonormé 0XY et en élévation suivant 0Z. La
+position (<I>x</I>,<I>y</I>,<I>z</I>) de l’organe terminal est
+définie par les positions angulaires des actuateurs corps et coude
+(coordonnées <I>x</I> et <I>y</I>), et par la position de l’axe
+linéaire vertical (coordonnée <I>z</I>).</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0.2cm">Le robot est de
+morphologie RPRR (trois articulations rotoïdes et une articulation
+prismatique).</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0.2cm">Les trois premiers
+d.d.l. (degré de liberté), ici RPR, constituent le «&nbsp;porteur
+du robot&nbsp;». Les d.d.l. suivants sont relatifs au poignet
+(organe terminal).</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0.2cm">Le rôle du porteur de
+robot est de fixer la position dans l’espace du point P
+d’intersection des axes du poignet.</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0.2cm">Le point piloté dans
+l’espace est nommé TCP (<I>Tool Center Point</I>).</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0.2cm">Dans notre cas, le TCP
+peut être arbitrairement défini à l’intersection de l’axe 0Z
+du poignet et du plan 0XY passant par la surface d’appui des doigts
+sur les pièces…</P>
+<H1 CLASS="western" ALIGN=JUSTIFY>Démarrage du système</H1>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Les liaisons CAN et
+puissance du robot passent par l’armoire générale de pilotage du
+site. Le bus CAN doit être connecté au poste hôte du logiciel
+«&nbsp;LLF Cellflex Scara&nbsp;» via un câble spécifique de type
+CAN-USB (adaptateur ESD). Le pilote de cet adaptateur n’est
+disponible que pour Windows&nbsp;XP…</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">La mise sous tension de
+l’armoire générale provoque le démarrage du logiciel d’interface
+sur l’écran tactile de façade&nbsp;; comme indiqué, un appui sur
+cet écran permet ensuite la mise sous tension et la mise en air des
+postes du processus. À ce stade, le robot Scara devient utilisable.</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H1 CLASS="western">Interface utilisateur</H1>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Le logiciel «&nbsp;LLF
+Cellflex Scara&nbsp;» peut maintenant être démarré. Son interface
+utilisateur est décomposée en deux onglets principaux&nbsp;:</P>
+<UL>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><B>Manual Mode</B>&nbsp;:
+	cette page doit être utilisée en priorité afin d’établir la
+	connexion avec le robot et la configuration de ses trajectoires.
+	Elle offre par ailleurs un accès bas niveau de pilotage de chacun
+	des axes du robot.</P>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><B>Automatic Mode</B>&nbsp;:
+	cette page est dédiée au processus Cellflex de constitution du
+	puzzle, elle implémente le serveur Modbus TCP/IP et propose une
+	visualisation graphique de l’état courant du puzzle.</P>
+</UL>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Chacune des pages dispose
+d’une fenêtre de suivi (<I>monitoring</I>) où sont reportés les
+messages d’information et d’erreur.</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Le logiciel est par
+défaut en mode simulation&nbsp;; ce mode rend inopérant la page
+Manual Mode. Le mode simulation permet d’exploiter l’esclave
+Modbus sans présence obligatoire du robot&nbsp;; dans ce cas, une
+petite animation graphique simule les déplacements de pièce entre
+les palettes et le puzzle.</P>
+<H2 CLASS="western">Configuration du logiciel</H2>
+<OL>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Charger la
+	cartographie Modbus du poste (Automatic Mode, bouton «&nbsp;Load
+	Modbus Configuration&nbsp;»). Le fichier à charger est nommé
+	modbus_scara.csv&nbsp;;</P>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Démarrer le service
+	TCP/IP, par défaut sur le port 502 (Automatic Mode, bouton
+	«&nbsp;Start&nbsp;»)&nbsp;;</P>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Le serveur Modbus
+	est maintenant démarré&nbsp;; en cas d’échec avec la version
+	actuelle du logiciel, un redémarrage de celui-ci est nécessaire
+	pour permettre un nouveau chargement de fichier de configuration.</P>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Activer le Manual
+	Mode (case à cocher en bas à gauche de l’IHM)&nbsp;;</P>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Charger le fichier
+	de configuration du robot (Manual Mode, bouton «&nbsp;Load&nbsp;»).
+	Le fichier à charger est nommé cellflex_scara.csv&nbsp;;</P>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Compléter si
+	nécessaire la liste de points (Manual Mode, bouton «&nbsp;Calculate&nbsp;»).</P>
+</OL>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Le chargement de la
+configuration du robot initialise les valeurs de vitesse et
+d’accélération des axes, la liste des points finaux des
+trajectoires (table <I>Tool Center Point Waypoints</I>) et les ordres
+de rotation de la pince nécessaires à l’orientation des pièces
+lors des transferts (table <I>Assembly Mode rotations</I>).</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Chaque <I>waypoint</I>
+est constitué des coordonnées x, y, z du TCP et d’un correcteur
+éventuel de rotation de la pince&nbsp;:</P>
+<UL>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Les points Pa_Mon et
+	Pa_Dem correspondent respectivement aux positions de prise ou dépose
+	des pièces sur les palettes en mode montage et démontage&nbsp;;</P>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Les points Pu_00 et
+	Pu_19 sont les positions sur le puzzle pour les emplacements
+	supérieur-gauche et inférieur-droit&nbsp;; les autres points, de
+	Pu_01 à Pu_18, peuvent être calculés automatiquement par la
+	commande «&nbsp;Calculate&nbsp;»&nbsp;;</P>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Le point PWait
+	permet de définir la position spatiale d’attente rejointe à la
+	fin des cycles d’assemblage ou de désassemblage&nbsp;;</P>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Le point PTrash est
+	à renseigner pour le rebut des éventuelles pièces non reconnues…</P>
+</UL>
+<H2 CLASS="western">Initialisation du robot</H2>
+<OL>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Activer le Manual
+	Mode (case à cocher en bas à gauche de l’IHM)&nbsp;;</P>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Établir la
+	connexion CAN avec le robot (Page Manual Mode, bouton «&nbsp;Open
+	Device&nbsp;»)&nbsp;;</P>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Sélectionner tous
+	les axes (Page Manual Mode, bouton «&nbsp;Select All&nbsp;»)&nbsp;;</P>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Ré-initialiser les
+	axes (Page Manual Mode, bouton «&nbsp;Reset&nbsp;»)&nbsp;;</P>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Lancer la procédure
+	de Prise d’Origine Machine (Page Manual Mode, bouton «&nbsp;Home&nbsp;»)&nbsp;;</P>
+	<LI><P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Le robot est
+	maintenant prêt à effectuer des trajectoires…</P>
+</OL>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H1 CLASS="western">Mise en exploitation</H1>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Les étapes ci-dessus de
+démarrage du service TCP/IP et d’initialisation du robot sont
+nécessaires et suffisantes. La page Automatic Mode permet de suivre
+le déroulement des opérations&nbsp;; en cas de défaut de
+fonctionnement, des messages liés au pilotage proprement dit du
+robot peuvent être reportés sur la page Manual Mode.</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H1 CLASS="western">Procédure d’apprentissage</H1>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Cette rubrique explique
+comment fabriquer un fichier initial de configuration du robot. La
+page Manual Mode est utilisée.</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Chaque axe peut être
+piloté séparément en choisissant une vitesse et une accélération,
+et avec des incréments de déplacement compris entre 0,1 et 10
+millimètres ou degrés. Le logiciel permet aussi le pilotage du TCP
+directement en cartésien, c’est-à-dire en agissant sur les
+coordonnées x, y et z.</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Ces outils permettent de
+définir les points nécessaires au processus.</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Le préhenseur peut aussi
+être manipulé par des commandes spécifiques&nbsp;: rotation de
+plus ou moins 90°, et ouverture/fermeture de la pince. Le réglage
+d’écartement des doigts n’est réglable que par édition du
+fichier de configuration (paramètres GripperOpen et GripperClose).</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Pour mémoriser les
+coordonnées d’un point, il suffit de sélectionner son nom dans la
+liste puis de cliquer sur le bouton «&nbsp;Update&nbsp;».</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Le bouton «&nbsp;Goto&nbsp;»
+permet d’ordonner au robot de rejoindre soit la position saisie
+juste au-dessus, avec une vitesse linéaire du TCP modifiable, soit
+la position définie par un point de la liste.</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Dans ce dernier cas, la
+position verticale visée est minorée par une marge de sécurité.
+Ce paramètre, nommé ZEscape, n’est réglable que par édition du
+fichier de configuration.</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Les commandes «&nbsp;Down&nbsp;»
+et «&nbsp;Up&nbsp;» sont réglées pour utiliser ce paramètre.</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm">Le fichier de
+configuration peut être sauvegardé par la commande «&nbsp;Save&nbsp;».</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><BR>
+</P>
+</BODY>
+</HTML>

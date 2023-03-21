@@ -1,0 +1,89 @@
+# cellflex_scara_no_calculate.csv - 18/06/2014 17:59:42
+# --------------------------------------------------------
+# LLF CELLFLEX Project - Scara spatial configuration file 
+# (c)2014 by A. Menu                                      
+# --------------------------------------------------------
+
+# puzzle center gap (mm)
+PuzzleGap; 65.00
+PuzzleCols; 5
+PuzzleRows; 4
+
+# TCP's relative escape (mm)
+ZEscape; 50.00
+
+# gap between fingers interior spacing and axis value (mm)
+GripperOffs; 27.20
+
+# fingers open/close spacing (mm)
+GripperOpen; 62.50
+GripperClose; 60.00
+
+# --------------------------------------------------------
+# Kinematic properties                                    
+# for axis: Tcp; ZAxis; Shoulder; Elbow; Wrist; Gripper   
+# --------------------------------------------------------
+
+# Velocity in m/s or rad/s
+Velocity; 0.08; 0.15; 0.25; 0.25; 0.25; 0.05
+
+# Acceleration in m/s2 or rad/s2
+Acceleration; 0.00; 0.10; 0.50; 0.50; 0.50; 0.10
+
+# --------------------------------------------------------
+# TCP Waypoints:      format = pointName; X; Y; Z; RZ     
+# (XYZ = TCP absolute coordinates in millimeters)         
+# (RZ  = TCP rotation corrector in deg., relative to Ox+) 
+# --------------------------------------------------------
+
+# palette point for assembly mode
+Pa_Mon; 366.22; 417.35; -107.79; 0.00
+
+# palette point for disassembly mode
+Pa_Dem; 423.51; 417.81; -107.63; 0.00
+
+# puzzle top-left piece
+Pu_00; 390.94; -230.91; -172.65; 0.00
+
+# puzzle piece number 1 to 18 points
+Pu_01; 390.53; -165.31; -172.22; 0.00
+Pu_02; 390.11; -99.72; -171.78; 0.00
+Pu_03; 389.70; -34.12; -171.35; 0.00
+Pu_04; 389.28; 31.48; -170.91; 0.00
+Pu_05; 456.54; -230.50; -172.22; 0.00
+Pu_06; 456.12; -164.90; -172.04; 0.00
+Pu_07; 455.71; -99.30; -171.68; 0.00
+Pu_08; 455.29; -33.71; -171.28; 0.00
+Pu_09; 454.88; 31.89; -170.86; 0.00
+Pu_10; 522.13; -230.08; -171.78; 0.00
+Pu_11; 521.72; -164.48; -171.68; 0.00
+Pu_12; 521.30; -98.89; -171.42; 0.00
+Pu_13; 520.89; -33.29; -171.09; 0.00
+Pu_14; 520.47; 32.31; -170.71; 0.00
+Pu_15; 587.73; -229.67; -171.35; 0.00
+Pu_16; 587.31; -164.07; -171.28; 0.00
+Pu_17; 586.90; -98.47; -171.09; 0.00
+Pu_18; 586.48; -32.88; -170.81; 0.00
+
+# puzzle bottom-right piece
+Pu_19; 586.07; 32.72; -170.50; 0.00
+
+# waiting point
+PWait; 400.00; 200.00; -100.00; 0.00
+
+# trash point
+PTrash; 500.00; 200.00; -100.00; 0.00
+
+# --------------------------------------------------------
+# TCP Orientation:  format = turnName; RZ_begin; RZ_end   
+# (TCP rotations in degrees, relative to Ox+)             
+# --------------------------------------------------------
+
+# assembly mode (from palette to puzzle)
+Pa_to_Pu_0; 0.00; 0.00
+Pa_to_Pu_1; 0.00; 90.00
+Pa_to_Pu_2; 180.00; 0.00
+Pa_to_Pu_3; 90.00; 0.00
+
+# for disassembly mode (from puzzle to palette)
+# just exchange RZ_begin and RZ_end...
